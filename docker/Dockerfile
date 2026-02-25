@@ -1,4 +1,4 @@
-FROM rust:1.84-bullseye as builder
+FROM rust:latest as builder
 
 LABEL maintainer="ysenih@erpya.com; EdwinBetanc0urt@outlook.com;" \
 	description="API RESTful with rust to manage Resources/Files/Images with S3;"
