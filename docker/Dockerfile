@@ -1,4 +1,4 @@
-FROM rust:1.93.1-bullseye as builder
+FROM rust:1.93.1-bookworm as builder
 
 LABEL maintainer="ysenih@erpya.com; EdwinBetanc0urt@outlook.com;" \
 	description="API RESTful with rust to manage Resources/Files/Images with S3;"
@@ -18,7 +18,7 @@ RUN apt-get update && \
     mv docker/.env /usr/local/cargo/bin/
 
 
-FROM debian:bullseye-20240612
+FROM debian:bookworm-slim
 
 # The argument should be duplicated at this stage
 ARG BUILD_VERSION "1.0.0"
